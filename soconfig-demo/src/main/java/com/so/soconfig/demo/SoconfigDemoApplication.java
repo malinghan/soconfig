@@ -14,11 +14,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.so.soconfig.client.annotation.EnableSoConfig;
 import com.so.soconfig.demo.config.SoDemoConfig;
 
 @SpringBootApplication
 @EnableConfigurationProperties({SoDemoConfig.class})
 @RestController
+@EnableSoConfig
 public class SoconfigDemoApplication {
 
     public static void main(String[] args) {

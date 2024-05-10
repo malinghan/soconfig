@@ -23,8 +23,8 @@
         </dependency>
 
         <dependency>
-            <groupId>cn.kimmking</groupId>
-            <artifactId>kkconfig-client</artifactId>
+            <groupId>com.so</groupId>
+            <artifactId>soconfig-client</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
