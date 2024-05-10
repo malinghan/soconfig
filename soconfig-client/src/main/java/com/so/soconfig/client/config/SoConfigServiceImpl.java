@@ -4,13 +4,10 @@ import java.util.Map;
 
 import org.springframework.context.ApplicationContext;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * @author someecho <linghan.ma@gmail.com>
  * Created on 2024-05-10
  */
-@Slf4j
 public class SoConfigServiceImpl implements SoConfigService {
 
     Map<String, String> config;

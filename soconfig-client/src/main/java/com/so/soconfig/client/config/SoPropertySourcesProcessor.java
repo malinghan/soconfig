@@ -34,16 +34,18 @@ public class SoPropertySourcesProcessor implements BeanFactoryPostProcessor, App
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
         ConfigurableEnvironment env = (ConfigurableEnvironment) environment;
-        if (env.getPropertySources().contains(CUSTOM_OUTER_PROPERTY_SOURCE)) {
+        if (env.getPropertySources().contains(CUSTOM_PROPERTY_SOURCES)) {
             return;
         }
         //mock config
         Map<String, String> configMeta = new HashMap<>();
-
+        configMeta.put("so.a", "changed-a500");
+        configMeta.put("so.b", "changed-b500");
+        configMeta.put("so.c", "changed-c500");
         SoConfigService configService = new SoConfigServiceImpl(applicationContext, configMeta);
 
         SoPropertySource soPropertySource  = new SoPropertySource(CUSTOM_OUTER_PROPERTY_SOURCE, configService);
-        CompositePropertySource composite = new CompositePropertySource(CUSTOM_OUTER_PROPERTY_SOURCE);
+        CompositePropertySource composite = new CompositePropertySource(CUSTOM_PROPERTY_SOURCES);
         composite.addPropertySource(soPropertySource);
         env.getPropertySources().addFirst(composite);
     }
