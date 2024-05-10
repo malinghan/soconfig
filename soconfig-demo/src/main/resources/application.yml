@@ -1,0 +1,8 @@
+spring:
+    application:
+        name: soconfig-demo
+so:
+    a: a100
+    b: b200
+server:
+    port: 9122
