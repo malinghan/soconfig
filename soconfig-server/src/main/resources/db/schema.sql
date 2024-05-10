@@ -6,6 +6,3 @@ create table if not exists `configs` (
         `pval` varchar(64) default null
 );
 
-insert into `configs` (`app`, `env`, `ns`, `pkey`, `pval`) values ('app1', 'dev', 'public', 'kk.a', 'dev100');
-insert into `configs` (`app`, `env`, `ns`, `pkey`, `pval`) values ('app1', 'dev', 'public', 'kk.b', 'http://localhost:9129');
-insert into `configs` (`app`, `env`, `ns`, `pkey`, `pval`) values ('app1', 'dev', 'public', 'kk.c', '100');

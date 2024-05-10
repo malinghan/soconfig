@@ -1,0 +1,15 @@
+### 查询配置列表
+GET http://localhost:9129/list?app=app1&env=dev&ns=public
+
+### 更新配置信息
+POST http://localhost:9129/update?app=app1&env=dev&ns=public
+Content-Type: application/json
+
+{
+  "so.a": "dev8888",
+  "so.c": "cc200",
+   "so.d": "dd200"
+}
+
+### 查询配置版本信息
+GET http://localhost:9129/version?app=app1&env=dev&ns=public

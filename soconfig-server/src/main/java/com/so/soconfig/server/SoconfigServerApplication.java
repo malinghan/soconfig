@@ -29,9 +29,9 @@ public class SoconfigServerApplication {
     }
 
     private void testAll() {
-        String url = "jdbc:h2:~/h2";
-        String username = "root"; // H2数据库的默认用户名
-        String password = "123456"; // H2数据库的默认密码
+        String url = "jdbc:h2:~/mydb";
+        String username = "sa"; // H2数据库的默认用户名
+        String password = ""; // H2数据库的默认密码
 
         Connection conn = null;
         try {

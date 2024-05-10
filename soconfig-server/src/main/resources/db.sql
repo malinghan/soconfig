@@ -1,5 +1,5 @@
 DROP TABLE  IF EXISTS `configs`;
-create table `configs` (
+create table  if not exists `configs` (
     `app` varchar(64) not null,
     `env` varchar(64) not null,
     `ns` varchar(64) not null,

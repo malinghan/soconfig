@@ -27,6 +27,7 @@ public class SoConfigController {
     //value: version -> timestamp
     Map<String, Long> VERSIONS = new HashMap<>();
 
+    @GetMapping("/list")
     public List<Configs> list(@RequestParam("app") String app,
             String env,
             String ns) {
